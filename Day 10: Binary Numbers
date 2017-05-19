@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int total=0;
+        int max = 0;
+        while(n>=1){
+            int i = n%2;
+            n=n/2;
+            if(i==1){
+                total++;
+                if(total>max)
+                    max = total;
+            }
+            else{
+                if(total>max)
+                    max = total;
+                total=0;
+            }      
+        }
+        System.out.println(max);
+}
+}
