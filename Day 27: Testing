@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        System.out.printf("%d\n",5);
+        System.out.printf("%d %d\n",3,3);
+        System.out.printf("%d %d %d\n",-4,3,0);
+        System.out.printf("%d %d\n",4,3);
+        System.out.printf("%d %d %d %d\n",-4,3,0,3);
+        System.out.printf("%d %d\n",5,3);
+        System.out.printf("%d %d %d %d %d\n",-2,-1,0,4,3);
+        System.out.printf("%d %d\n",6,3);
+        System.out.printf("%d %d %d %d %d %d\n",-2,-3,0,0,4,3);
+        System.out.printf("%d %d\n",7,3);
+        System.out.printf("%d %d %d %d %d %d %d\n",-3,2,-3,0,0,4,3);
+           
+    }
+}
