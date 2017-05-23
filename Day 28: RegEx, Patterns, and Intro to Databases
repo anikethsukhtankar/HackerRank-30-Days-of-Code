@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int N = in.nextInt();
+        Map<String,List<String>> emails = new TreeMap<>();
+        for(int a0 = 0; a0 < N; a0++){
+            String firstName = in.next();
+            String emailID = in.next();
+            if(emails.containsKey(firstName)){
+                List<String> temp = emails.get(firstName);
+                temp.add(emailID);
+            } else {
+                List<String> temp = new ArrayList<>();
+                temp.add(emailID);
+                emails.put(firstName,temp);
+            }
+        }
+        in.close();
+        String emailRegex = "[a-z]+@gmail.com$";
+        Pattern p = Pattern.compile(emailRegex);
+        Matcher m;
+        for(Map.Entry<String,List<String>> entry: emails.entrySet()){
+            List<String> emailid = entry.getValue();
+            for(String s : emailid){
+                //System.out.println(s);
+                m = p.matcher(s);
+                if (m.find()){
+                    System.out.println(entry.getKey());
+                }
+            }
+        }
+        
+    }
+}
