@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int actualDay = sc.nextInt();
+        int actualMonth = sc.nextInt();
+        int actualYear = sc.nextInt();
+        int expectedDay = sc.nextInt();
+        int expectedMonth = sc.nextInt();
+        int expectedYear = sc.nextInt();
+        sc.close();
+        if(actualYear < expectedYear || (actualYear == expectedYear && actualMonth < expectedMonth) || (actualYear == expectedYear             && actualMonth == expectedMonth && actualDay<=expectedDay)){
+            System.out.println(0);
+        }            
+        else{
+            if (actualYear > expectedYear){
+                System.out.println(10000);
+            } else if (actualMonth > expectedMonth){
+                System.out.println(500 * (actualMonth - expectedMonth));
+            } else if (actualDay > expectedDay){
+                System.out.println(15 * (actualDay - expectedDay));
+            }
+        }
+    }
+}
